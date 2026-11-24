@@ -2,99 +2,109 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About · Minerva Pineda</title>
-<meta name="description" content="I’m a senior at Stanford studying Product Design on the Physical Design + Manufacturing track, with a minor in Mechanical Engineering and a domain in Desig…">
-<meta property="og:title" content="About · Minerva Pineda">
-<meta property="og:description" content="I’m a senior at Stanford studying Product Design on the Physical Design + Manufacturing track, with a minor in Mechanical Engineering and a domain in Desig…">
-<meta property="og:type" content="website">
-<meta name="theme-color" content="#f1ebe0">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&amp;family=IBM+Plex+Mono&amp;family=Instrument+Serif:ital@0;1&amp;family=Reenie+Beanie&amp;display=swap">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="img/logo.png">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Pinyon+Script&amp;family=IBM+Plex+Mono&amp;display=swap">
 <style>
-body{margin:0;background:#f1ebe0}
-a{color:#231e19}a:hover{color:#a3241e}
-a:focus-visible{outline:2px solid #2f5aa8;outline-offset:3px}
-/* ---- interactions ---- */
-.mp-card,.mp-frame,.mp-work,.mp-pill,.mp-btn,.mp-fig .mp-work,.mp-next,.mp-next .mp-arrow,.mp-exp,.mp-cta,.mp-stat span,.mp-logo,.mp-card .mp-title{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,background-color .25s ease,color .25s ease,border-color .25s ease,opacity .25s ease,padding .25s ease}
-.mp-card .mp-frame{transform-origin:50% 0}
-.mp-card:hover .mp-frame{transform:translateY(-8px) rotate(-.8deg);box-shadow:0 2px 4px rgba(35,30,25,.16),0 22px 44px rgba(35,30,25,.18)!important}
-.mp-card:nth-child(even):hover .mp-frame{transform:translateY(-8px) rotate(.8deg)}
-.mp-mat{overflow:hidden}
-.mp-card:hover .mp-work,.mp-fig:hover .mp-work{transform:scale(1.04)}
-.mp-card:hover .mp-title{color:#a3241e}
-.mp-cta{opacity:0;transform:translateY(-6px)}
-.mp-card:hover .mp-cta,.mp-card:focus-visible .mp-cta{opacity:1;transform:none}
-.mp-hang:hover{transform:rotate(-.6deg)}
-.mp-hang{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
-.mp-nav{background-image:linear-gradient(#a3241e,#a3241e);background-size:0 1px;background-repeat:no-repeat;background-position:0 100%;padding-bottom:3px;transition:background-size .3s ease,color .25s ease}
-.mp-nav:hover,.mp-nav[aria-current]{background-size:100% 1px}
-.mp-nav:hover{color:#a3241e!important}
-.mp-logo{transition:transform .3s cubic-bezier(.2,.7,.2,1)}
-.mp-logo:hover{transform:rotate(-6deg) scale(1.04)!important}
-.mp-resume:hover{background:#231e19!important;color:#f1ebe0!important}
-.mp-pill:hover{background:#231e19!important;color:#f1ebe0!important;border-color:#231e19!important}
-.mp-pill[aria-current]:hover{background:#a3241e!important;border-color:#a3241e!important}
-.mp-btn:hover{background:#a3241e!important;color:#faf6ee!important;transform:translateY(-2px)}
-.mp-btn-light:hover{background:#f1ebe0!important;color:#6b1f24!important}
-.mp-next:hover{color:#a3241e!important}
-.mp-next:hover .mp-arrow{transform:translateX(10px)}
-.mp-arrow{display:inline-block}
-.mp-note{display:inline-block}
-.mp-email{background-image:linear-gradient(currentColor,currentColor);background-size:0 1px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .35s ease}
-.mp-email:hover{background-size:100% 1px}
-.mp-exp:hover{background:#f4e7c3;padding-left:16px!important;padding-right:16px!important}
+body{margin:0;background:#e4e4e4;color:#111}
+.lbl{width:1440px;margin:0 auto 24px;font:500 13px Inter;letter-spacing:.14em;text-transform:uppercase;color:#777}
+.pg{position:relative;width:1440px;margin:0 auto;background:#fff;box-shadow:0 2px 30px rgba(0,0,0,.08);font-family:Inter,sans-serif}
+.mono{font-family:'IBM Plex Mono',monospace}
+.nv a{color:#111;text-decoration:none;cursor:pointer}
+.nv a:hover{opacity:.5}
+.nv .cur::after{content:"*";color:#a3241e;margin-left:2px}
+.tx{font-size:15px;line-height:1.75;text-align:justify;margin:0 0 16px}
+.mut{color:#777;font-weight:400}
+.h{font:500 12px Inter;letter-spacing:.16em;margin:0 0 18px}
+.ex{display:flex;gap:16px;align-items:baseline;padding:14px 0;font-size:15px;border-bottom:1px solid #eee}
+.ex b{font-weight:500}
+.ex .dot{flex:1;border-bottom:1px dotted #ccc;transform:translateY(-4px)}
+.li{font-size:12px;line-height:2}
+.fr{background:#111;padding:6px}
+.fr img{display:block;filter:grayscale(1) contrast(1.06)}
+.ph{color:#b8605a;font-weight:500}
+.ft a{color:#111;text-decoration:none}
+.ft a:hover{color:#a3241e}
+</style>
 
-.mp-strip{scrollbar-width:none}
-.mp-strip::-webkit-scrollbar{display:none}
-.mp-car-btn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:9999px;border:1px solid #231e19;background:rgba(241,235,224,.92);color:#231e19;font-size:20px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:.85;transition:opacity .2s ease,background-color .2s ease,color .2s ease}
-.mp-car-btn:hover{background:#231e19;color:#f1ebe0;opacity:1}
-.mp-car:hover .mp-car-btn{opacity:1}
-@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}.mp-card:hover .mp-frame,.mp-card:hover .mp-work,.mp-fig:hover .mp-work,.mp-hang:hover{transform:none!important}}
-
+<style>
+html,body{background:#fff}
+body{margin:0;overflow-x:hidden}
+.lbl{display:none!important}
+.pg{box-shadow:none!important;margin:0 auto!important}
+a{text-decoration:none}
+.nv a,.cats a,.w,.cd,.back,.sw,.nextp,.lk{cursor:pointer}
+a:focus-visible{outline:1px solid #a3241e;outline-offset:3px}
+.logo{position:absolute;left:34px;top:18px;z-index:5;display:block;line-height:0;transition:opacity .2s}
+.logo img{height:46px;width:auto}
+.logo:hover{opacity:.6}
+.nextp{display:block;color:#111}
+.nextp:hover{color:#a3241e}
+.back{display:inline-block}
+@media (hover:hover) and (pointer:fine){html.dotcur,html.dotcur *{cursor:none!important}}
+#dotcur{position:fixed;left:0;top:0;width:7px;height:7px;border-radius:50%;background:#111;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);opacity:0;transition:opacity .15s,background .15s}
+#dotcur.on{opacity:1} #dotcur.hot{background:#a3241e}
 </style>
 </head>
 <body>
-<div style="background: #f1ebe0; color: #231e19; font-family: 'Hanken Grotesk', system-ui, sans-serif; min-height: 100vh">
-  <header style="box-sizing: border-box; width: 100%; padding-left: clamp(16px, 2.5vw, 36px); padding-right: clamp(16px, 2.5vw, 36px); padding-top: 22px; padding-bottom: 22px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between">
-    <a href="index.html" class="mp-logo" aria-label="Minerva Pineda, home" style="display: inline-flex; flex-direction: column; align-items: flex-start; text-decoration: none; color: #a3241e; font-family: 'Reenie Beanie', cursive; font-size: 34px; line-height: 0.8; transform: rotate(-4deg); transform-origin: left center">Minerva<svg viewBox="0 0 120 14" aria-hidden="true" style="width: 2.4em; height: 0.3em; margin-top: 0.02em"><path d="M2 9 C30 2 70 2 118 8" fill="none" stroke="#a3241e" stroke-width="2.6" stroke-linecap="round"></path></svg></a>
-    <nav aria-label="Main" style="display: flex; gap: 28px; align-items: center; font-size: 15px; font-weight: 500">
-      <a class="mp-nav" href="physical.html" style="text-decoration: none; color: #231e19; display: inline-flex; align-items: center; gap: 8px">Work</a>
-      <a class="mp-nav" href="about.html" aria-current="page" style="text-decoration: none; color: #231e19; display: inline-flex; align-items: center; gap: 8px"><svg width="11" height="10" viewBox="0 0 11 10" aria-hidden="true" style="flex: none; transform: rotate(-12deg)"><path d="M5.6 0.9 C8.4 0.6 10.4 2.6 10.1 5.3 C9.8 8.1 7.6 9.5 5 9.2 C2.2 8.9 0.6 7 0.9 4.6 C1.2 2.4 3.1 1.1 5.6 0.9 Z" fill="#a3241e" opacity="0.92"></path><path d="M3 3.2 C4.4 2.6 6.6 2.5 8 3.4" fill="none" stroke="#a3241e" stroke-width="0.8" stroke-linecap="round" opacity="0.5"></path></svg>About</a>
-      <a href="#" class="mp-resume" style="text-decoration: none; color: #231e19; border: 1px solid #231e19; padding: 10px 16px; border-radius: 2px">Resume ↗</a>
-    </nav>
-  </header>
-  <section style="max-width: 1312px; margin: 0 auto; box-sizing: border-box; padding-left: clamp(16px, 4.5vw, 64px); padding-right: clamp(16px, 4.5vw, 64px); padding-top: 72px; display: flex; flex-wrap: wrap; gap: 56px 6%; align-items: flex-start">
-    <div style="flex: 999 1 480px; max-width: 640px; min-width: 0">
-      <h1 style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(52px, 6vw, 80px); line-height: 1; letter-spacing: -0.02em; margin: 0 0 36px">Hi, I’m Minerva.</h1>
-      <p style="margin: 0 0 14px; font-size: 17px; line-height: 1.7">Welcome to my portfolio!</p><p style="margin: 0 0 14px; font-size: 17px; line-height: 1.7">I’m a senior at Stanford studying Product Design on the Physical Design + Manufacturing track, with a minor in Mechanical Engineering and a domain in Designing for Biological Futures.</p><p style="margin: 0 0 14px; font-size: 17px; line-height: 1.7">I fell in love with design from a very early age. Before I had the words for it, I was already trying to make things: building little inventions for my toys, cutting up cardboard, saving random craft supplies, and using my “crafting box” to fix things that bugged me. A lot of it was messy, but it taught me that design could start with curiosity, imagination, and the simple feeling of wait, this could be better.</p><p style="margin: 0 0 14px; font-size: 17px; line-height: 1.7">Today, I’m interested in the space between people, objects, and systems, especially how thoughtful design can make everyday experiences feel more intuitive, accessible, and meaningful, and a little kinder to the planet. I also think a lot about what happens to the things we make after they leave our hands: who/what they’re made for and who they affect along the way. That’s a big part of why I’m planning to coterm in Sustainability Science and Practice.</p><p style="margin: 0; font-size: 17px; line-height: 1.7">At the heart of it, I think I’m still that same kid with a cardboard box, just with better tools, bigger questions, and a deeper care for the people (and the planet) I’m designing for &lt;3.</p>
-    </div>
-    <div style="flex: 1 1 340px; min-width: 0; max-width: 460px; margin-top: 12px"><div class="mp-frame" style="background: #a8231f; padding: 14px; box-shadow: 0 1px 2px rgba(35,30,25,0.14), 0 10px 24px rgba(35,30,25,0.10)"><div class="mp-mat" style="background: #f4e7c3; padding: 9%"><img decoding="async" class="mp-work" src="assets/me-headshot.jpg" alt="photo of you" style="display: block; width: 100%; height: auto"></div></div><div style="display: flex; gap: 20px; align-items: center; margin-top: 40px"><div style="width: 270px; flex: none; transform: rotate(-2deg)"><div class="mp-frame" style="background: #ecd47e; padding: 8px; box-shadow: 0 1px 2px rgba(35,30,25,0.14), 0 10px 24px rgba(35,30,25,0.10)"><div class="mp-mat" style="background: #f4e7c3; padding: 9%"><img decoding="async" class="mp-work" src="assets/little-me.webp" alt="little me" style="display: block; width: 100%; height: auto"></div></div></div><div class="mp-note" style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px; margin-left: auto; text-align: right"><p style="font-family: 'Reenie Beanie', cursive; font-size: 30px; line-height: 1; color: #a3241e; margin: 0; transform: rotate(-3deg); text-align: start">me&nbsp; before i knew what design was</p></div></div></div>
-  </section>
-  <section style="max-width: 1312px; margin: 0 auto; box-sizing: border-box; padding-left: clamp(16px, 4.5vw, 64px); padding-right: clamp(16px, 4.5vw, 64px); margin-top: 120px">
-    <h2 style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 38px; margin: 0 0 24px">Experience</h2>
-    <div style="border-top: 1px solid #d6ccbb"><div class="mp-exp" style="display: flex; flex-wrap: wrap; gap: 6px 24px; justify-content: space-between; align-items: baseline; padding: 20px 0; border-bottom: 1px solid #d6ccbb"><p style="margin: 0; font-size: 18px"><span style="font-weight: 500">Production Design Research Intern</span> <span style="color: #655b51">· CCRMA, Stanford</span></p><p style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #655b51; margin: 0">Current</p></div><div class="mp-exp" style="display: flex; flex-wrap: wrap; gap: 6px 24px; justify-content: space-between; align-items: baseline; padding: 20px 0; border-bottom: 1px solid #d6ccbb"><p style="margin: 0; font-size: 18px"><span style="font-weight: 500">Social Media Design Intern</span> <span style="color: #655b51">· Flourish AI</span></p><p style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #655b51; margin: 0">2024</p></div><div class="mp-exp" style="display: flex; flex-wrap: wrap; gap: 6px 24px; justify-content: space-between; align-items: baseline; padding: 20px 0; border-bottom: 1px solid #d6ccbb"><p style="margin: 0; font-size: 18px"><span style="font-weight: 500">Materials Research</span> <span style="color: #655b51">· Soft Matter Product Design Lab, University of Miami</span></p><p style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #655b51; margin: 0">2024</p></div><div class="mp-exp" style="display: flex; flex-wrap: wrap; gap: 6px 24px; justify-content: space-between; align-items: baseline; padding: 20px 0; border-bottom: 1px solid #d6ccbb"><p style="margin: 0; font-size: 18px"><span style="font-weight: 500">Design Lead</span> <span style="color: #655b51">· The Design Kids, Stanford</span></p><p style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #655b51; margin: 0">2024–2026</p></div></div>
-  </section>
-  <section style="max-width: 1312px; margin: 0 auto; box-sizing: border-box; padding-left: clamp(16px, 4.5vw, 64px); padding-right: clamp(16px, 4.5vw, 64px); margin-top: 104px; padding-bottom: 120px; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 48px">
-    <div style="min-width: 0"><h3 style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 30px; margin: 0 0 16px; padding-bottom: 12px; border-bottom: 1px solid #d6ccbb">Make</h3><p style="margin: 0; font-size: 16px; line-height: 1.85">Fusion 360, SolidWorks, Onshape, AutoCAD</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Laser cutting</p><p style="margin: 0; font-size: 16px; line-height: 1.85">3D printing</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Physical prototyping</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Mechanism design (gears, cams, linkages)</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Design for manufacturing (DFM)</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Engineering drawings</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Foam modeling</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Materials testing + selection</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Hand fabrication (PRL)</p><p style="margin: 0; font-size: 16px; line-height: 1.85">MATLAB</p></div><div style="min-width: 0"><h3 style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 30px; margin: 0 0 16px; padding-bottom: 12px; border-bottom: 1px solid #d6ccbb">Design</h3><p style="margin: 0; font-size: 16px; line-height: 1.85">Figma</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Brand identity</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Sketching + rapid ideation</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Adobe Illustrator, Photoshop</p><p style="margin: 0; font-size: 16px; line-height: 1.85">UI design + wireframing</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Visual identity</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Survey design (Qualtrics)</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Storyboarding</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Pitch decks</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Short-form video</p></div><div style="min-width: 0"><h3 style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 30px; margin: 0 0 16px; padding-bottom: 12px; border-bottom: 1px solid #d6ccbb">Research</h3><p style="margin: 0; font-size: 16px; line-height: 1.85">Needfinding</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Interviews</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Stakeholder + systems mapping</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Prototype + usability testing</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Synthesis + affinity mapping</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Competitive analysis</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Concept validation</p><p style="margin: 0; font-size: 16px; line-height: 1.85">Bilingual interviews (English/Spanish)</p></div><div style="min-width: 0"><h3 style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 30px; margin: 0 0 16px; padding-bottom: 12px; border-bottom: 1px solid #d6ccbb">Learning</h3><p style="margin: 0; font-size: 16px; line-height: 1.85">ME 102 Foundations of Product Realization</p><p style="margin: 0; font-size: 16px; line-height: 1.85">ME 103 Product Realization: Design and Making</p><p style="margin: 0; font-size: 16px; line-height: 1.85">ENGR 14/15 Intro to Solid Mechanics + Dynamics</p><p style="margin: 0; font-size: 16px; line-height: 1.85">ME 30 Engineering Thermodynamics</p><p style="margin: 0; font-size: 16px; line-height: 1.85">SUSTAIN 123 Delicious by Design</p><p style="margin: 0; font-size: 16px; line-height: 1.85">EARTHSYS 125 Shades of Green</p><p style="margin: 0; font-size: 16px; line-height: 1.85">BIOE 122 Biosecurity</p><p style="margin: 0; font-size: 16px; line-height: 1.85">ME 80 Mechanics of Materials</p></div>
-  </section>
-  <footer style="background: #6b1f24; color: #faf6ee">
-    <div style="max-width: 1312px; margin: 0 auto; box-sizing: border-box; padding-left: clamp(16px, 4.5vw, 64px); padding-right: clamp(16px, 4.5vw, 64px); padding-top: 80px; padding-bottom: 80px; display: flex; flex-wrap: wrap; gap: 28px 48px; align-items: flex-end; justify-content: space-between">
-      <p style="font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(40px, 5vw, 64px); line-height: 1; margin: 0">Let’s make something.</p>
-      <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 20px">
-        <a href="mailto:minervax@stanford.edu" class="mp-email" style="font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.1; letter-spacing: -0.01em; color: #faf6ee; text-decoration: none">minervax@stanford.edu</a>
-        <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end">
-          <a href="https://www.linkedin.com/in/minervapineda/" class="mp-btn mp-btn-light" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 0 22px; border: 1px solid #f1ebe0; border-radius: 9999px; color: #f1ebe0; text-decoration: none; font-size: 15px; font-weight: 500">LinkedIn</a>
-          <a href="#" class="mp-btn mp-btn-light" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 0 22px; border: 1px solid #f1ebe0; border-radius: 9999px; color: #f1ebe0; text-decoration: none; font-size: 15px; font-weight: 500">Resume</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+
+<div>
+<div class="lbl">About · new theme · scroll</div>
+<section class="pg">
+<div style="display:flex;justify-content:space-between;padding:34px 44px 0">
+<div></div><a class="logo" href="index.html" aria-label="Minerva Pineda, home"><img src="img/logo.png" alt="Minerva Pineda monogram"></a>
+<div class="mono nv" style="font-size:12px"><a href="index.html">home</a> · <a href="projects.html">projects</a> · <a class="cur" href="about.html">about</a> · <a href="contact.html">contact</a></div></div>
+
+<div style="display:flex;gap:90px;padding:110px 150px 0;align-items:flex-start">
+<div style="width:520px">
+<div style="font:400 58px/1 'Pinyon Script',cursive;margin-bottom:34px">Hi, i'm Minerva</div>
+<p class="tx">I have always been curious to a fault. When my dad tinkered around the house, I wanted to know how electricity found its way through the walls; when my mom cooked, I wanted to know what gave each dish its depth. My interests changed with the seasons, and so did my hobbies, my favorite colors, and a wardrobe that leaned unapologetically bright. My parents worried, often out loud, that I was all over the place and would never settle on one thing.</p><p class="tx">What they could not yet see was the thread running through all of it. Every phase, however different from the last, carried the same two things: a love for design and an endless curiosity about how the world is made.</p><p class="tx" style="color: var(--ink, #231e19)">There is an old phrase, <i class="ph">jack of all trades, master of none</i>. It began as a simple description of someone with many skills; over the centuries it hardened into a warning against doing too much. More recently, the phrase grew a second half: <i class="ph">oftentimes better than a master of one</i>. As someone who spent years being told to choose, that second half is the one I hold closest.</p><p class="tx">I still approach everything the same way: I walk in curious, rarely knowing everything at the start, and I learn along the way. Each new thing I learn makes the last one make a little more sense. I am still learning, and I intend to keep it that way.</p></div>
 </div>
 
+<div style="padding:150px 150px 0">
+<div class="h" style="padding-bottom:12px;border-bottom:1px solid #111;margin:0">EXPERIENCE</div><div class="ex"><span><b>Head of Design / Project Manager</b> <span class="mut">· evgr.n Café</span></span><span class="dot"></span><span class="mono mut" style="font-size:11px;text-transform:lowercase">current</span></div><div class="ex"><span><b>Production Design Research Intern</b> <span class="mut">· CCRMA, Stanford</span></span><span class="dot"></span><span class="mono mut" style="font-size:11px;text-transform:lowercase">current</span></div><div class="ex"><span><b>Social Media Design &amp; PM Intern</b> <span class="mut">· Flourish AI</span></span><span class="dot"></span><span class="mono mut" style="font-size: 11px; text-transform: lowercase">2024</span></div><div class="ex"><span><b>Materials Research</b> <span class="mut">· Soft Matter Product Design Lab, University of Miami</span></span><span class="dot"></span><span class="mono mut" style="font-size:11px;text-transform:lowercase">2024</span></div><div class="ex"><span><b>Design Lead + Project Manager</b> <span class="mut">· The Design Kids, Stanford</span></span><span class="dot"></span><span class="mono mut" style="font-size:11px;text-transform:lowercase">2024–2026</span></div></div>
+
+<div style="padding:120px 150px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:50px"><div><div class="h">MAKE<sup>11</sup></div><div class="mono li">Fusion 360, SolidWorks, Onshape, AutoCAD</div><div class="mono li">Laser cutting</div><div class="mono li">3D printing</div><div class="mono li">Physical prototyping</div><div class="mono li">Mechanism design (gears, cams, linkages)</div><div class="mono li">Design for manufacturing (DFM)</div><div class="mono li">Engineering drawings</div><div class="mono li">Foam modeling</div><div class="mono li">Materials testing + selection</div><div class="mono li">Hand fabrication (PRL)</div><div class="mono li">MATLAB</div></div><div><div class="h">DESIGN<sup>10</sup></div><div class="mono li">Figma</div><div class="mono li">Brand identity</div><div class="mono li">Sketching + rapid ideation</div><div class="mono li">Adobe Illustrator, Photoshop</div><div class="mono li">UI design + wireframing</div><div class="mono li">Visual identity</div><div class="mono li">Survey design (Qualtrics)</div><div class="mono li">Storyboarding</div><div class="mono li">Pitch decks</div><div class="mono li">Short-form video</div></div><div><div class="h">RESEARCH<sup>8</sup></div><div class="mono li">Needfinding</div><div class="mono li">Interviews</div><div class="mono li">Stakeholder + systems mapping</div><div class="mono li">Prototype + usability testing</div><div class="mono li">Synthesis + affinity mapping</div><div class="mono li">Competitive analysis</div><div class="mono li">Concept validation</div><div class="mono li">Bilingual interviews (English/Spanish)</div></div><div><div class="h">LEARNING<sup>8</sup></div><div class="mono li">ME 102 Foundations of Product Realization</div><div class="mono li">ME 103 Product Realization: Design and Making</div><div class="mono li">ENGR 14/15 Intro to Solid Mechanics + Dynamics</div><div class="mono li">ME 30 Engineering Thermodynamics</div><div class="mono li">SUSTAIN 123 Delicious by Design</div><div class="mono li">EARTHSYS 125 Shades of Green</div><div class="mono li">BIOE 122 Biosecurity</div><div class="mono li">ME 80 Mechanics of Materials</div></div></div>
+
+<div style="padding:120px 150px 0"><div id="hgh" style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:12px;border-bottom:1px solid #111;cursor:pointer"><span class="h" style="margin:0">HOW I GOT HERE</span><span id="hghI" class="mono" style="font-size:13px">+</span></div><div id="hghB" style="display:none;padding-top:34px"><div style="display:grid;grid-template-columns:1fr 1fr;gap:60px"><div><p class="tx">I am a first generation, student from South East Los Angeles, California. Growing up, I rarely saw someone whose path I could follow, so I set out to become the person I had been looking for. I tried nearly everything, partly out of curiosity and partly in search of the one thing that would feel entirely my own.</p><p class="tx">Long before I had the language for it, that thing was design. I built small inventions for my toys, cut cardboard into whatever I could imagine, and kept a crafting box of saved supplies for fixing the things that bothered me. Much of it was messy, yet it taught me that design often begins with a quiet thought: <i>wait, this could be better.</i></p></div><div><p class="tx">That thought followed me to Stanford, where I now study Product Design on the Physical Design and Manufacturing track, with a minor in Mechanical Engineering and a domain in Designing for Biological Futures. I am drawn to the space between people, objects, and systems, and to how thoughtful design can make everyday life more intuitive, accessible, and quietly delightful.</p><p class="tx">I am still that kid with the <i>crafting box,</i> only now with better tools, bigger questions, and a curiosity that deepens with everything I design.</p></div></div></div></div>
+
+<div class="ft" style="padding:170px 0 90px;text-align:center">
+<div style="font:400 48px/1 'Pinyon Script',cursive">let's connect<span style="color:#a3241e;font:500 20px Inter;vertical-align:top">*</span></div>
+<div class="mono" style="font-size:13px;margin-top:26px"><a href="mailto:minervax@stanford.edu">minervax@stanford.edu</a></div>
+<div class="mono" style="font-size:12px;margin-top:12px;color:#777"><a style="color:#777" href="https://www.linkedin.com/in/minervapineda/">linkedin</a></div></div>
+<p style="position:absolute;left:44px;bottom:30px;width:230px;margin:0;font:400 11px/1.65 Inter,sans-serif;color:#1a1a1a;text-align:justify">Minerva is curious about almost everything, and patient enough to learn it.</p>
+</section>
+</div>
+
+<script>
+(function(){function fit(){var w=document.documentElement.clientWidth,z=Math.min(1,w/1440);document.body.style.zoom=z;}
+fit();addEventListener('resize',fit);})();
+</script>
+<script>
+(function(){if(!matchMedia('(hover:hover) and (pointer:fine)').matches)return;
+var d=document.createElement('div');d.id='dotcur';document.body.appendChild(d);document.documentElement.classList.add('dotcur');
+var z=function(){return parseFloat(document.body.style.zoom)||1};
+addEventListener('mousemove',function(e){var k=z();d.style.left=e.clientX/k+'px';d.style.top=e.clientY/k+'px';d.classList.add('on');
+d.classList.toggle('hot',!!(e.target.closest&&e.target.closest('a,button,.cb,#hgh,.flip,.w')));});
+document.addEventListener('mouseleave',function(){d.classList.remove('on')});})();
+</script>
+<script>
+(function(){
+    function setup() {
+      var h = document.getElementById('hgh');
+      if (!h || h.dataset.ready) return;
+      h.dataset.ready = '1';
+      var b = document.getElementById('hghB'), i = document.getElementById('hghI');
+      h.addEventListener('click', function () {
+        var open = b.style.display === 'none';
+        b.style.display = open ? 'block' : 'none';
+        i.textContent = open ? '−' : '+';
+      });
+    }
+    setTimeout(setup, 60); setTimeout(setup, 600);
+  })();
+</script>
 </body>
 </html>

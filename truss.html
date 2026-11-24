@@ -88,7 +88,11 @@ a:focus-visible{outline:1px solid #a3241e;outline-offset:3px}
 </div>
 
 <script>
-(function(){function fit(){var w=document.documentElement.clientWidth,z=Math.min(1,w/1440);document.body.style.zoom=z;if(document.body.hasAttribute('data-fit')){var g=document.querySelector('.pg');if(g)g.style.height=Math.max(700,Math.floor(window.innerHeight/z))+'px';}}
+(function(){function fit(){var w=document.documentElement.clientWidth,z=Math.min(1,w/1440);document.body.style.zoom=z;if(document.body.hasAttribute('data-fit')){var g=document.querySelector('.pg');if(g){var H=Math.max(700,Math.floor(window.innerHeight/z));g.style.height=H+'px';center(g,H);}}}
+function center(g,H){var els=[].filter.call(g.children,function(c){return !c.matches('.logo,.fbio,.cats,[class*=nv]')&&!c.querySelector('.nv')&&c.textContent.trim()!==''||c.id==='mxFlip'});
+var top=1e9,bot=0;els.forEach(function(c){if(c.dataset.t==null){c.dataset.t=c.offsetTop;c.dataset.m=parseFloat(getComputedStyle(c).marginTop)||0;}var t=+c.dataset.t;top=Math.min(top,t);bot=Math.max(bot,t+c.offsetHeight);});
+if(!els.length)return;var reserve=g.querySelector('.cats')?150:90,avail0=80,avail1=H-reserve,delta=Math.max(0,Math.round((avail0+avail1)/2-(top+bot)/2));
+els.forEach(function(c){if(getComputedStyle(c).position==='absolute')c.style.top=(+c.dataset.t+delta)+'px';else c.style.marginTop=(+c.dataset.m+delta)+'px';});}
 fit();addEventListener('resize',fit);})();
 </script>
 <script>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Contact · Minerva Pineda</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="img/logo.png">
+<link rel="icon" type="image/png" href="favicon.png"><link rel="icon" href="favicon.ico" sizes="32x32"><link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Pinyon+Script&amp;family=IBM+Plex+Mono&amp;display=swap">
 <style>
@@ -33,7 +33,8 @@ html,body{background:#fff}
 body{margin:0;overflow-x:hidden}
 .lbl{display:none!important}
 .pg{box-shadow:none!important;margin:0 auto!important}
-a{text-decoration:none}
+a{text-decoration:none;color:inherit}
+body[data-fit] .pg{overflow:hidden}
 .nv a,.cats a,.w,.cd,.back,.sw,.nextp,.lk{cursor:pointer}
 a:focus-visible{outline:1px solid #a3241e;outline-offset:3px}
 .logo{position:absolute;left:34px;top:18px;z-index:5;display:block;line-height:0;transition:opacity .2s}
@@ -43,20 +44,21 @@ a:focus-visible{outline:1px solid #a3241e;outline-offset:3px}
 .nextp:hover{color:#a3241e}
 .back{display:inline-block}
 @media (hover:hover) and (pointer:fine){html.dotcur,html.dotcur *{cursor:none!important}}
-#dotcur{position:fixed;left:0;top:0;width:7px;height:7px;border-radius:50%;background:#111;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);opacity:0;transition:opacity .15s,background .15s}
+#dotcur{position:fixed;left:0;top:0;width:10px;height:10px;border-radius:50%;background:#111;pointer-events:none;z-index:9999;transform:translate(-50%,-50%) scale(var(--s,1));opacity:0;transition:opacity .15s,background .15s,transform .35s cubic-bezier(.2,.8,.2,1)}
 #dotcur.on{opacity:1} #dotcur.hot{background:#a3241e}
 </style>
 </head>
 <body>
-
+<script>document.body.setAttribute('data-fit','')</script>
+<div data-fit-marker></div>
 <div>
 <div class="lbl">Contact · new theme</div>
 <section class="pg"><div style="display:flex;justify-content:space-between;padding:34px 44px 0"><div></div><a class="logo" href="index.html" aria-label="Minerva Pineda, home"><img src="img/logo.png" alt="Minerva Pineda monogram"></a><div class="mono nv" style="font-size:12px"><a href="index.html">home</a> · <a href="projects.html">projects</a> · <a href="about.html">about</a> · <a class="cur" href="contact.html">contact</a></div></div>
-<div style="display:flex;gap:110px;padding:120px 150px 0;align-items:flex-start">
+<div style="display:flex;gap:110px;padding:120px 150px 0;align-items:center">
 <div style="width:520px">
 <div style="font:400 58px/1 'Pinyon Script',cursive">let's connect</div>
 <p style="font-size:15px;line-height:1.75;margin:26px 0 30px;text-align:justify">Whether it is a role, a collaboration or a question about something I made, I would love to hear from you. The fastest way to reach me is email, or grab a time below!</p>
-<div class="cr"><span class="mono k">email</span><span class="dot"></span><span class="v"><a href="mailto:minervax@stanford.edu">minervax@stanford.edu</a></span></div><div class="cr"><span class="mono k">linkedin</span><span class="dot"></span><span class="v"><a href="https://www.linkedin.com/in/minervapineda/">in/minervapineda ↗</a></span></div><div class="cr"><span class="mono k">based in</span><span class="dot"></span><span class="v">Palo Alto, CA</span></div><div class="cr"><span class="mono k">open to</span><span class="dot"></span><span class="v">2027 internships &amp; full-time roles</span></div></div>
+<div class="cr"><span class="mono k">email</span><span class="dot"></span><span class="v"><a href="mailto:minervax@stanford.edu">minervax@stanford.edu</a></span></div><div class="cr"><span class="mono k">linkedin</span><span class="dot"></span><span class="v"><a href="https://www.linkedin.com/in/minervapineda/">in/minervapineda ↗</a></span></div><div class="cr"><span class="mono k">based in</span><span class="dot"></span><span class="v">Palo Alto, CA</span></div><div class="cr"><span class="mono k">open to</span><span class="dot"></span><span class="v">2027 full-time roles &amp; internships</span></div></div>
 <div class="cal"><div class="h" style="font:500 12px Inter;letter-spacing:.16em">BOOK A TIME</div>
 <div class="mono k" style="margin-top:8px">30 min · google meet · pacific time</div>
 <a class="btn" href="https://calendar.app.google/7NxELjxJy8gGZxyK9" target="_blank" rel="noopener" style="text-decoration:none">PICK A TIME ↗</a>
@@ -65,7 +67,7 @@ a:focus-visible{outline:1px solid #a3241e;outline-offset:3px}
 </div>
 
 <script>
-(function(){function fit(){var w=document.documentElement.clientWidth,z=Math.min(1,w/1440);document.body.style.zoom=z;}
+(function(){function fit(){var w=document.documentElement.clientWidth,z=Math.min(1,w/1440);if(document.body.hasAttribute('data-fit'))z=Math.min(z,window.innerHeight/900);document.body.style.zoom=z;}
 fit();addEventListener('resize',fit);})();
 </script>
 <script>
@@ -73,7 +75,10 @@ fit();addEventListener('resize',fit);})();
 var d=document.createElement('div');d.id='dotcur';document.body.appendChild(d);document.documentElement.classList.add('dotcur');
 var z=function(){return parseFloat(document.body.style.zoom)||1};
 addEventListener('mousemove',function(e){var k=z();d.style.left=e.clientX/k+'px';d.style.top=e.clientY/k+'px';d.classList.add('on');
-d.classList.toggle('hot',!!(e.target.closest&&e.target.closest('a,button,.cb,#hgh,.flip,.w')));});
+d.classList.toggle('hot',!!(e.target.closest&&e.target.closest('a,button,.cb,#hgh,.flip,.w')));
+var t=performance.now();if(lt){var dt=t-lt||1,v=Math.hypot(e.clientX-lx,e.clientY-ly)/dt;sp=sp*.85+v*.15;}lx=e.clientX;ly=e.clientY;lt=t;
+if(sp>2.2){d.style.setProperty('--s','4');clearTimeout(rt);rt=setTimeout(function(){sp=0;d.style.setProperty('--s','1');},600);}});
+var lx=0,ly=0,lt=0,sp=0,rt;
 document.addEventListener('mouseleave',function(){d.classList.remove('on')});})();
 </script>
 

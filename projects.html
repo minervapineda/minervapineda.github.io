@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Projects · Minerva Pineda</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="img/logo.png">
+<link rel="icon" type="image/png" href="favicon.png"><link rel="icon" href="favicon.ico" sizes="32x32"><link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Pinyon+Script&amp;family=IBM+Plex+Mono&amp;display=swap">
 <style>
@@ -19,27 +19,27 @@ body{margin:0;background:#e4e4e4;color:#111}
 .w{position:relative;font:500 56px/1 Inter,sans-serif;letter-spacing:-.02em;color:#111;cursor:pointer;transition:color .25s}
 .w sup{font:500 13px Inter;margin-left:4px;vertical-align:top;position:relative;top:4px}
 .wa{position:absolute;right:-22px;top:-8px;font:500 24px Inter;color:#a3241e;opacity:0;transform:scale(.4) rotate(-90deg);transition:opacity .25s,transform .35s cubic-bezier(.2,.7,.2,1)}
-.w:hover{color:#b8605a} .w:hover .wa{opacity:1;transform:none}
+.w:hover{color:#a3241e} .w:hover .wa{opacity:1;transform:none}
 .hn{position:absolute;left:0;right:0;top:440px;text-align:center;font-size:12px;color:#9a9690;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s;pointer-events:none}
 .hn.on{opacity:1;transform:none}
 .back{font-size:11px;color:#888;margin-bottom:22px;cursor:pointer} .back:hover{color:#a3241e}
 .ct{font:500 56px/1 Inter;letter-spacing:-.02em} .ct sup{font:500 13px Inter;margin-left:4px;vertical-align:top;position:relative;top:4px}
 .sub{font-size:11px;color:#888;margin-top:14px}
-.others{font-size:12px;color:#aaa} .others a{cursor:pointer} .others a.on{color:#111} .others a.on::after{content:"*";color:#a3241e} .others a:hover{color:#a3241e}
+.others{font-size:12px;color:#aaa} .others a{cursor:pointer;color:#aaa} .others a.on{color:#111} .others a.on::after{content:"*";color:#a3241e} .others a:hover{color:#a3241e}
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:70px 44px;align-items:start;padding:70px 150px 150px}
 .cd{display:block;color:#111;cursor:pointer}
 .ph{background:#fff;border:1px solid #e6e3dd;padding:14px;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
 .ph img,.soon{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:#fff}
 .hand{font:400 26px/1 'Pinyon Script',cursive;color:#b8605a;transform:rotate(-2deg);margin-top:16px}
 .cd .hand{font-size:22px;margin:8px 0 0 30px}
-.soon{display:flex;align-items:center;justify-content:center;font-size:11px;color:#aaa}
+.soon{display:flex;align-items:center;justify-content:center;font-size:11px;color:#aaa;background:#faf9f7!important}
 .cd:hover .ph{transform:translateY(-6px) rotate(-.6deg);box-shadow:0 14px 30px rgba(0,0,0,.08)}
 .cm{display:flex;gap:12px;align-items:baseline;margin-top:18px}
 .num{font-size:11px;color:#b8605a}
 .nm{font:500 15px Inter;position:relative}
 .ast{color:#a3241e;margin-left:2px;opacity:0;transition:opacity .2s} .cd:hover .ast{opacity:1}
-.mt{font-size:11px;color:#888;margin:6px 0 0 30px}
-.ds{font-size:13px;line-height:1.6;color:#555;margin:10px 0 0 30px}
+.mt{font-size:11px;color:#888;margin:6px 0 0}
+.ds{font-size:13px;line-height:1.6;color:#555;margin:10px 0 0}
 </style>
 
 <style>
@@ -47,7 +47,8 @@ html,body{background:#fff}
 body{margin:0;overflow-x:hidden}
 .lbl{display:none!important}
 .pg{box-shadow:none!important;margin:0 auto!important}
-a{text-decoration:none}
+a{text-decoration:none;color:inherit}
+body[data-fit] .pg{overflow:hidden}
 .nv a,.cats a,.w,.cd,.back,.sw,.nextp,.lk{cursor:pointer}
 a:focus-visible{outline:1px solid #a3241e;outline-offset:3px}
 .logo{position:absolute;left:34px;top:18px;z-index:5;display:block;line-height:0;transition:opacity .2s}
@@ -57,16 +58,17 @@ a:focus-visible{outline:1px solid #a3241e;outline-offset:3px}
 .nextp:hover{color:#a3241e}
 .back{display:inline-block}
 @media (hover:hover) and (pointer:fine){html.dotcur,html.dotcur *{cursor:none!important}}
-#dotcur{position:fixed;left:0;top:0;width:7px;height:7px;border-radius:50%;background:#111;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);opacity:0;transition:opacity .15s,background .15s}
+#dotcur{position:fixed;left:0;top:0;width:10px;height:10px;border-radius:50%;background:#111;pointer-events:none;z-index:9999;transform:translate(-50%,-50%) scale(var(--s,1));opacity:0;transition:opacity .15s,background .15s,transform .35s cubic-bezier(.2,.8,.2,1)}
 #dotcur.on{opacity:1} #dotcur.hot{background:#a3241e}
 </style>
 </head>
 <body>
-<div><section class="pg" id="pIndex" style="height:900px"><div style="display:flex;justify-content:space-between;padding:34px 44px 0"><div></div><a class="logo" href="index.html" aria-label="Minerva Pineda, home"><img src="img/logo.png" alt="Minerva Pineda monogram"></a><div class="mono nv" style="font-size:12px"><a href="index.html">home</a> · <a class="cur" href="projects.html">projects</a> · <a href="about.html">about</a> · <a href="contact.html">contact</a></div></div>
+<script>document.body.setAttribute('data-fit','')</script>
+<div data-fit-marker></div><div><section class="pg" id="pIndex" style="height:900px"><div style="display:flex;justify-content:space-between;padding:34px 44px 0"><div></div><a class="logo" href="index.html" aria-label="Minerva Pineda, home"><img src="img/logo.png" alt="Minerva Pineda monogram"></a><div class="mono nv" style="font-size:12px"><a href="index.html">home</a> · <a class="cur" href="projects.html">projects</a> · <a href="about.html">about</a> · <a href="contact.html">contact</a></div></div>
 <div style="position:absolute;left:0;right:0;top:200px;text-align:center;font:400 40px/1 'Pinyon Script',cursive">things I've made</div>
 <div class="words"><a class="w" data-c="physical" href="physical.html">PHYSICAL<sup>7</sup><span class="wa">*</span></a><a class="w" data-c="digital" href="digital.html">DIGITAL<sup>4</sup><span class="wa">*</span></a><a class="w" data-c="visual" href="visual.html">VISUAL<sup>4</sup><span class="wa">*</span></a></div><div class="hn mono" data-c="physical">full circle &nbsp;·&nbsp; ball launcher &nbsp;·&nbsp; ergonomic lighter &nbsp;·&nbsp; pirate’s plunder &nbsp;·&nbsp; jewelry holder &nbsp;·&nbsp; truss bridge &nbsp;·&nbsp; tracheal acoustic monitor</div><div class="hn mono" data-c="digital">full circle &nbsp;·&nbsp; neonatal resuscitation monitor &nbsp;·&nbsp; muwekma garden map &nbsp;·&nbsp; the custyumizer</div><div class="hn mono" data-c="visual">brand boards &nbsp;·&nbsp; crochella posters &nbsp;·&nbsp; creative projects &nbsp;·&nbsp; evgr.n</div><p class="fbio">Minerva is curious about almost everything, and patient enough to learn it.</p></section></div>
 <script>
-(function(){function fit(){var w=document.documentElement.clientWidth,z=Math.min(1,w/1440);document.body.style.zoom=z;}
+(function(){function fit(){var w=document.documentElement.clientWidth,z=Math.min(1,w/1440);if(document.body.hasAttribute('data-fit'))z=Math.min(z,window.innerHeight/900);document.body.style.zoom=z;}
 fit();addEventListener('resize',fit);})();
 </script>
 <script>
@@ -74,7 +76,10 @@ fit();addEventListener('resize',fit);})();
 var d=document.createElement('div');d.id='dotcur';document.body.appendChild(d);document.documentElement.classList.add('dotcur');
 var z=function(){return parseFloat(document.body.style.zoom)||1};
 addEventListener('mousemove',function(e){var k=z();d.style.left=e.clientX/k+'px';d.style.top=e.clientY/k+'px';d.classList.add('on');
-d.classList.toggle('hot',!!(e.target.closest&&e.target.closest('a,button,.cb,#hgh,.flip,.w')));});
+d.classList.toggle('hot',!!(e.target.closest&&e.target.closest('a,button,.cb,#hgh,.flip,.w')));
+var t=performance.now();if(lt){var dt=t-lt||1,v=Math.hypot(e.clientX-lx,e.clientY-ly)/dt;sp=sp*.85+v*.15;}lx=e.clientX;ly=e.clientY;lt=t;
+if(sp>2.2){d.style.setProperty('--s','4');clearTimeout(rt);rt=setTimeout(function(){sp=0;d.style.setProperty('--s','1');},600);}});
+var lx=0,ly=0,lt=0,sp=0,rt;
 document.addEventListener('mouseleave',function(){d.classList.remove('on')});})();
 </script>
 <script>

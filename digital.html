@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Digital · Minerva Pineda</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="img/logo.png">
+<link rel="icon" type="image/png" href="favicon.png"><link rel="icon" href="favicon.ico" sizes="32x32"><link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Pinyon+Script&amp;family=IBM+Plex+Mono&amp;display=swap">
 <style>
@@ -19,27 +19,27 @@ body{margin:0;background:#e4e4e4;color:#111}
 .w{position:relative;font:500 56px/1 Inter,sans-serif;letter-spacing:-.02em;color:#111;cursor:pointer;transition:color .25s}
 .w sup{font:500 13px Inter;margin-left:4px;vertical-align:top;position:relative;top:4px}
 .wa{position:absolute;right:-22px;top:-8px;font:500 24px Inter;color:#a3241e;opacity:0;transform:scale(.4) rotate(-90deg);transition:opacity .25s,transform .35s cubic-bezier(.2,.7,.2,1)}
-.w:hover{color:#b8605a} .w:hover .wa{opacity:1;transform:none}
+.w:hover{color:#a3241e} .w:hover .wa{opacity:1;transform:none}
 .hn{position:absolute;left:0;right:0;top:440px;text-align:center;font-size:12px;color:#9a9690;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s;pointer-events:none}
 .hn.on{opacity:1;transform:none}
 .back{font-size:11px;color:#888;margin-bottom:22px;cursor:pointer} .back:hover{color:#a3241e}
 .ct{font:500 56px/1 Inter;letter-spacing:-.02em} .ct sup{font:500 13px Inter;margin-left:4px;vertical-align:top;position:relative;top:4px}
 .sub{font-size:11px;color:#888;margin-top:14px}
-.others{font-size:12px;color:#aaa} .others a{cursor:pointer} .others a.on{color:#111} .others a.on::after{content:"*";color:#a3241e} .others a:hover{color:#a3241e}
+.others{font-size:12px;color:#aaa} .others a{cursor:pointer;color:#aaa} .others a.on{color:#111} .others a.on::after{content:"*";color:#a3241e} .others a:hover{color:#a3241e}
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:70px 44px;align-items:start;padding:70px 150px 150px}
 .cd{display:block;color:#111;cursor:pointer}
 .ph{background:#fff;border:1px solid #e6e3dd;padding:14px;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
 .ph img,.soon{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:#fff}
 .hand{font:400 26px/1 'Pinyon Script',cursive;color:#b8605a;transform:rotate(-2deg);margin-top:16px}
 .cd .hand{font-size:22px;margin:8px 0 0 30px}
-.soon{display:flex;align-items:center;justify-content:center;font-size:11px;color:#aaa}
+.soon{display:flex;align-items:center;justify-content:center;font-size:11px;color:#aaa;background:#faf9f7!important}
 .cd:hover .ph{transform:translateY(-6px) rotate(-.6deg);box-shadow:0 14px 30px rgba(0,0,0,.08)}
 .cm{display:flex;gap:12px;align-items:baseline;margin-top:18px}
 .num{font-size:11px;color:#b8605a}
 .nm{font:500 15px Inter;position:relative}
 .ast{color:#a3241e;margin-left:2px;opacity:0;transition:opacity .2s} .cd:hover .ast{opacity:1}
-.mt{font-size:11px;color:#888;margin:6px 0 0 30px}
-.ds{font-size:13px;line-height:1.6;color:#555;margin:10px 0 0 30px}
+.mt{font-size:11px;color:#888;margin:6px 0 0}
+.ds{font-size:13px;line-height:1.6;color:#555;margin:10px 0 0}
 </style>
 
 <style>
@@ -47,7 +47,8 @@ html,body{background:#fff}
 body{margin:0;overflow-x:hidden}
 .lbl{display:none!important}
 .pg{box-shadow:none!important;margin:0 auto!important}
-a{text-decoration:none}
+a{text-decoration:none;color:inherit}
+body[data-fit] .pg{overflow:hidden}
 .nv a,.cats a,.w,.cd,.back,.sw,.nextp,.lk{cursor:pointer}
 a:focus-visible{outline:1px solid #a3241e;outline-offset:3px}
 .logo{position:absolute;left:34px;top:18px;z-index:5;display:block;line-height:0;transition:opacity .2s}
@@ -57,7 +58,7 @@ a:focus-visible{outline:1px solid #a3241e;outline-offset:3px}
 .nextp:hover{color:#a3241e}
 .back{display:inline-block}
 @media (hover:hover) and (pointer:fine){html.dotcur,html.dotcur *{cursor:none!important}}
-#dotcur{position:fixed;left:0;top:0;width:7px;height:7px;border-radius:50%;background:#111;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);opacity:0;transition:opacity .15s,background .15s}
+#dotcur{position:fixed;left:0;top:0;width:10px;height:10px;border-radius:50%;background:#111;pointer-events:none;z-index:9999;transform:translate(-50%,-50%) scale(var(--s,1));opacity:0;transition:opacity .15s,background .15s,transform .35s cubic-bezier(.2,.8,.2,1)}
 #dotcur.on{opacity:1} #dotcur.hot{background:#a3241e}
 </style>
 </head>
@@ -65,11 +66,11 @@ a:focus-visible{outline:1px solid #a3241e;outline-offset:3px}
 
 <div>
 <div class="lbl">Digital · category page</div>
-<section class="pg"><div style="display:flex;justify-content:space-between;padding:34px 44px 0"><div></div><a class="logo" href="index.html" aria-label="Minerva Pineda, home"><img src="img/logo.png" alt="Minerva Pineda monogram"></a><div class="mono nv" style="font-size:12px"><a href="index.html">home</a> · <a class="cur" href="projects.html">projects</a> · <a href="about.html">about</a> · <a href="contact.html">contact</a></div></div><div style="display:flex;justify-content:space-between;align-items:flex-end;padding:110px 150px 0"><div><a class="mono back" href="projects.html">← projects</a><div class="ct">DIGITAL<sup>4</sup></div><div class="mono sub">[ screens, sites, and the apps that go with the objects ]</div></div><div class="mono others"><a class="sw" data-c="physical" href="physical.html">physical</a> · <a class="sw on" data-c="digital" href="digital.html">digital</a> · <a class="sw" data-c="visual" href="visual.html">visual</a></div></div><div class="grid"><a class="cd" href="full-circle.html"><div class="ph"><img src="img/aae34147a39ce63267815d418751025a.jpg" alt=""></div><div class="cm"><span class="num mono">01</span><span class="nm">Full Circle<span class="ast">*</span></span></div><div class="mt mono">d.school capstone · team project · 2025-26</div><p class="ds">The physical prototype: a circular LCD in a custom enclosure, built to look at home on a shelf.</p></a><a class="cd" href="neonatal.html"><div class="ph"><img src="img/a7928fbf9ef13fe24f0b647022959375.jpg" alt=""></div><div class="cm"><span class="num mono">02</span><span class="nm">Neonatal Resuscitation Monitor<span class="ast">*</span></span></div><div class="mt mono">design 141 · team project · 2026</div><p class="ds">A redesigned monitor that helps clinicians read a newborn’s vitals and keep pace during resuscitation.</p></a><a class="cd" href="muwekma.html"><div class="ph"><img src="img/bb31f0b235ff45ef7b3f59d3046c2134.jpg" alt=""></div><div class="cm"><span class="num mono">03</span><span class="nm">Muwekma Garden Map<span class="ast">*</span></span></div><div class="mt mono">muwekma-tah-ruk, stanford · team project · 2025</div><p class="ds">ArcGIS plant map for visitors and tribal members to learn the connections between plants, people, and place.</p></a><a class="cd" href="custyumizer.html"><div class="ph"><img src="img/80b458a585dd6ba6c9c637382a04281c.jpg" alt=""></div><div class="cm"><span class="num mono">04</span><span class="nm">The CustYumizer<span class="ast">*</span></span></div><div class="mt mono">greener by default · team project · 2026</div><p class="ds">Hospitals think plant-forward food costs more. We built a tool that translates it into the language CEOs care about: patients, budget, impact.</p></a></div><div style="height:40px"></div><p class="fbio">Minerva is curious about almost everything, and patient enough to learn it.</p></section>
+<section class="pg"><div style="display:flex;justify-content:space-between;padding:34px 44px 0"><div></div><a class="logo" href="index.html" aria-label="Minerva Pineda, home"><img src="img/logo.png" alt="Minerva Pineda monogram"></a><div class="mono nv" style="font-size:12px"><a href="index.html">home</a> · <a class="cur" href="projects.html">projects</a> · <a href="about.html">about</a> · <a href="contact.html">contact</a></div></div><div style="display:flex;justify-content:space-between;align-items:flex-end;padding:110px 150px 0"><div><a class="mono back" href="projects.html">← projects</a><div class="ct">DIGITAL<sup>4</sup></div><div class="mono sub">screens, sites, and the apps that go with the objects</div></div><div class="mono others"><a class="sw" data-c="physical" href="physical.html">physical</a> · <a class="sw on" data-c="digital" href="digital.html">digital</a> · <a class="sw" data-c="visual" href="visual.html">visual</a></div></div><div class="grid"><a class="cd" href="full-circle.html"><div class="ph"><img src="img/aae34147a39ce63267815d418751025a.jpg" alt=""></div><div class="cm"><span class="nm">Full Circle<span class="ast">*</span></span></div><div class="mt mono">d.school capstone · team project · 2025-26</div><p class="ds">The physical prototype: a circular LCD in a custom enclosure, built to look at home on a shelf.</p></a><a class="cd" href="neonatal.html"><div class="ph"><img src="img/a7928fbf9ef13fe24f0b647022959375.jpg" alt=""></div><div class="cm"><span class="nm">Neonatal Resuscitation Monitor<span class="ast">*</span></span></div><div class="mt mono">design 141 · team project · 2026</div><p class="ds">A redesigned monitor that helps clinicians read a newborn’s vitals and keep pace during resuscitation.</p></a><a class="cd" href="muwekma.html"><div class="ph"><img src="img/bb31f0b235ff45ef7b3f59d3046c2134.jpg" alt=""></div><div class="cm"><span class="nm">Muwekma Garden Map<span class="ast">*</span></span></div><div class="mt mono">muwekma-tah-ruk, stanford · team project · 2025</div><p class="ds">ArcGIS plant map for visitors and tribal members to learn the connections between plants, people, and place.</p></a><a class="cd" href="custyumizer.html"><div class="ph"><img src="img/80b458a585dd6ba6c9c637382a04281c.jpg" alt=""></div><div class="cm"><span class="nm">The CustYumizer<span class="ast">*</span></span></div><div class="mt mono">greener by default · team project · 2026</div><p class="ds">Hospitals think plant-forward food costs more. We built a tool that translates it into the language CEOs care about: patients, budget, impact.</p></a></div><div style="height:40px"></div><p class="fbio">Minerva is curious about almost everything, and patient enough to learn it.</p></section>
 </div>
 
 <script>
-(function(){function fit(){var w=document.documentElement.clientWidth,z=Math.min(1,w/1440);document.body.style.zoom=z;}
+(function(){function fit(){var w=document.documentElement.clientWidth,z=Math.min(1,w/1440);if(document.body.hasAttribute('data-fit'))z=Math.min(z,window.innerHeight/900);document.body.style.zoom=z;}
 fit();addEventListener('resize',fit);})();
 </script>
 <script>
@@ -77,7 +78,10 @@ fit();addEventListener('resize',fit);})();
 var d=document.createElement('div');d.id='dotcur';document.body.appendChild(d);document.documentElement.classList.add('dotcur');
 var z=function(){return parseFloat(document.body.style.zoom)||1};
 addEventListener('mousemove',function(e){var k=z();d.style.left=e.clientX/k+'px';d.style.top=e.clientY/k+'px';d.classList.add('on');
-d.classList.toggle('hot',!!(e.target.closest&&e.target.closest('a,button,.cb,#hgh,.flip,.w')));});
+d.classList.toggle('hot',!!(e.target.closest&&e.target.closest('a,button,.cb,#hgh,.flip,.w')));
+var t=performance.now();if(lt){var dt=t-lt||1,v=Math.hypot(e.clientX-lx,e.clientY-ly)/dt;sp=sp*.85+v*.15;}lx=e.clientX;ly=e.clientY;lt=t;
+if(sp>2.2){d.style.setProperty('--s','4');clearTimeout(rt);rt=setTimeout(function(){sp=0;d.style.setProperty('--s','1');},600);}});
+var lx=0,ly=0,lt=0,sp=0,rt;
 document.addEventListener('mouseleave',function(){d.classList.remove('on')});})();
 </script>
 

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>About · Minerva Pineda</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="img/logo.png">
+<link rel="icon" type="image/png" href="favicon.png"><link rel="icon" href="favicon.ico" sizes="32x32"><link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Pinyon+Script&amp;family=IBM+Plex+Mono&amp;display=swap">
 <style>
@@ -24,7 +24,7 @@ body{margin:0;background:#e4e4e4;color:#111}
 .li{font-size:12px;line-height:2}
 .fr{background:#111;padding:6px}
 .fr img{display:block;filter:grayscale(1) contrast(1.06)}
-.ph{color:#b8605a;font-weight:500}
+.ph{color:#a3241e;font-weight:500}
 .ft a{color:#111;text-decoration:none}
 .ft a:hover{color:#a3241e}
 </style>
@@ -34,7 +34,8 @@ html,body{background:#fff}
 body{margin:0;overflow-x:hidden}
 .lbl{display:none!important}
 .pg{box-shadow:none!important;margin:0 auto!important}
-a{text-decoration:none}
+a{text-decoration:none;color:inherit}
+body[data-fit] .pg{overflow:hidden}
 .nv a,.cats a,.w,.cd,.back,.sw,.nextp,.lk{cursor:pointer}
 a:focus-visible{outline:1px solid #a3241e;outline-offset:3px}
 .logo{position:absolute;left:34px;top:18px;z-index:5;display:block;line-height:0;transition:opacity .2s}
@@ -44,7 +45,7 @@ a:focus-visible{outline:1px solid #a3241e;outline-offset:3px}
 .nextp:hover{color:#a3241e}
 .back{display:inline-block}
 @media (hover:hover) and (pointer:fine){html.dotcur,html.dotcur *{cursor:none!important}}
-#dotcur{position:fixed;left:0;top:0;width:7px;height:7px;border-radius:50%;background:#111;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);opacity:0;transition:opacity .15s,background .15s}
+#dotcur{position:fixed;left:0;top:0;width:10px;height:10px;border-radius:50%;background:#111;pointer-events:none;z-index:9999;transform:translate(-50%,-50%) scale(var(--s,1));opacity:0;transition:opacity .15s,background .15s,transform .35s cubic-bezier(.2,.8,.2,1)}
 #dotcur.on{opacity:1} #dotcur.hot{background:#a3241e}
 </style>
 </head>
@@ -68,10 +69,10 @@ a:focus-visible{outline:1px solid #a3241e;outline-offset:3px}
 
 <div style="padding:120px 150px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:50px"><div><div class="h">MAKE<sup>11</sup></div><div class="mono li">Fusion 360, SolidWorks, Onshape, AutoCAD</div><div class="mono li">Laser cutting</div><div class="mono li">3D printing</div><div class="mono li">Physical prototyping</div><div class="mono li">Mechanism design (gears, cams, linkages)</div><div class="mono li">Design for manufacturing (DFM)</div><div class="mono li">Engineering drawings</div><div class="mono li">Foam modeling</div><div class="mono li">Materials testing + selection</div><div class="mono li">Hand fabrication (PRL)</div><div class="mono li">MATLAB</div></div><div><div class="h">DESIGN<sup>10</sup></div><div class="mono li">Figma</div><div class="mono li">Brand identity</div><div class="mono li">Sketching + rapid ideation</div><div class="mono li">Adobe Illustrator, Photoshop</div><div class="mono li">UI design + wireframing</div><div class="mono li">Visual identity</div><div class="mono li">Survey design (Qualtrics)</div><div class="mono li">Storyboarding</div><div class="mono li">Pitch decks</div><div class="mono li">Short-form video</div></div><div><div class="h">RESEARCH<sup>8</sup></div><div class="mono li">Needfinding</div><div class="mono li">Interviews</div><div class="mono li">Stakeholder + systems mapping</div><div class="mono li">Prototype + usability testing</div><div class="mono li">Synthesis + affinity mapping</div><div class="mono li">Competitive analysis</div><div class="mono li">Concept validation</div><div class="mono li">Bilingual interviews (English/Spanish)</div></div><div><div class="h">LEARNING<sup>8</sup></div><div class="mono li">ME 102 Foundations of Product Realization</div><div class="mono li">ME 103 Product Realization: Design and Making</div><div class="mono li">ENGR 14/15 Intro to Solid Mechanics + Dynamics</div><div class="mono li">ME 30 Engineering Thermodynamics</div><div class="mono li">SUSTAIN 123 Delicious by Design</div><div class="mono li">EARTHSYS 125 Shades of Green</div><div class="mono li">BIOE 122 Biosecurity</div><div class="mono li">ME 80 Mechanics of Materials</div></div></div>
 
-<div style="padding:120px 150px 0"><div id="hgh" style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:12px;border-bottom:1px solid #111;cursor:pointer"><span class="h" style="margin:0">HOW I GOT HERE</span><span id="hghI" class="mono" style="font-size:13px">+</span></div><div id="hghB" style="display:none;padding-top:34px"><div style="display:grid;grid-template-columns:1fr 1fr;gap:60px"><div><p class="tx">I am a first generation, student from South East Los Angeles, California. Growing up, I rarely saw someone whose path I could follow, so I set out to become the person I had been looking for. I tried nearly everything, partly out of curiosity and partly in search of the one thing that would feel entirely my own.</p><p class="tx">Long before I had the language for it, that thing was design. I built small inventions for my toys, cut cardboard into whatever I could imagine, and kept a crafting box of saved supplies for fixing the things that bothered me. Much of it was messy, yet it taught me that design often begins with a quiet thought: <i>wait, this could be better.</i></p></div><div><p class="tx">That thought followed me to Stanford, where I now study Product Design on the Physical Design and Manufacturing track, with a minor in Mechanical Engineering and a domain in Designing for Biological Futures. I am drawn to the space between people, objects, and systems, and to how thoughtful design can make everyday life more intuitive, accessible, and quietly delightful.</p><p class="tx">I am still that kid with the <i>crafting box,</i> only now with better tools, bigger questions, and a curiosity that deepens with everything I design.</p></div></div></div></div>
+<div style="padding:120px 150px 0"><div id="hgh" style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:12px;border-bottom:1px solid #111;cursor:pointer"><span class="h" style="margin:0">HOW I GOT HERE</span><span id="hghI" class="mono" style="font-size:13px">−</span></div><div id="hghB" style="display:block;padding-top:34px"><div style="display:grid;grid-template-columns:1fr 1fr;gap:60px"><div><p class="tx">I am a first generation, student from South East Los Angeles, California. Growing up, I rarely saw someone whose path I could follow, so I set out to become the person I had been looking for. I tried nearly everything, partly out of curiosity and partly in search of the one thing that would feel entirely my own.</p><p class="tx">Long before I had the language for it, that thing was design. I built small inventions for my toys, cut cardboard into whatever I could imagine, and kept a crafting box of saved supplies for fixing the things that bothered me. Much of it was messy, yet it taught me that design often begins with a quiet thought: <i>wait, this could be better.</i></p></div><div><p class="tx">That thought followed me to Stanford, where I now study Product Design on the Physical Design and Manufacturing track, with a minor in Mechanical Engineering and a domain in Designing for Biological Futures. I am drawn to the space between people, objects, and systems, and to how thoughtful design can make everyday life more intuitive, accessible, and quietly delightful.</p><p class="tx">I am still that kid with the <i>crafting box,</i> only now with better tools, bigger questions, and a curiosity that deepens with everything I design.</p></div></div></div></div>
 
 <div class="ft" style="padding:170px 0 90px;text-align:center">
-<div style="font:400 48px/1 'Pinyon Script',cursive">let's connect<span style="color:#a3241e;font:500 20px Inter;vertical-align:top">*</span></div>
+<div style="font:400 48px/1 'Pinyon Script',cursive">let's connect<span style="color:#a3241e;font:500 20px Inter;vertical-align:top;margin-left:10px">*</span></div>
 <div class="mono" style="font-size:13px;margin-top:26px"><a href="mailto:minervax@stanford.edu">minervax@stanford.edu</a></div>
 <div class="mono" style="font-size:12px;margin-top:12px;color:#777"><a style="color:#777" href="https://www.linkedin.com/in/minervapineda/">linkedin</a></div></div>
 <p style="position:absolute;left:44px;bottom:30px;width:230px;margin:0;font:400 11px/1.65 Inter,sans-serif;color:#1a1a1a;text-align:justify">Minerva is curious about almost everything, and patient enough to learn it.</p>
@@ -79,7 +80,7 @@ a:focus-visible{outline:1px solid #a3241e;outline-offset:3px}
 </div>
 
 <script>
-(function(){function fit(){var w=document.documentElement.clientWidth,z=Math.min(1,w/1440);document.body.style.zoom=z;}
+(function(){function fit(){var w=document.documentElement.clientWidth,z=Math.min(1,w/1440);if(document.body.hasAttribute('data-fit'))z=Math.min(z,window.innerHeight/900);document.body.style.zoom=z;}
 fit();addEventListener('resize',fit);})();
 </script>
 <script>
@@ -87,7 +88,10 @@ fit();addEventListener('resize',fit);})();
 var d=document.createElement('div');d.id='dotcur';document.body.appendChild(d);document.documentElement.classList.add('dotcur');
 var z=function(){return parseFloat(document.body.style.zoom)||1};
 addEventListener('mousemove',function(e){var k=z();d.style.left=e.clientX/k+'px';d.style.top=e.clientY/k+'px';d.classList.add('on');
-d.classList.toggle('hot',!!(e.target.closest&&e.target.closest('a,button,.cb,#hgh,.flip,.w')));});
+d.classList.toggle('hot',!!(e.target.closest&&e.target.closest('a,button,.cb,#hgh,.flip,.w')));
+var t=performance.now();if(lt){var dt=t-lt||1,v=Math.hypot(e.clientX-lx,e.clientY-ly)/dt;sp=sp*.85+v*.15;}lx=e.clientX;ly=e.clientY;lt=t;
+if(sp>2.2){d.style.setProperty('--s','4');clearTimeout(rt);rt=setTimeout(function(){sp=0;d.style.setProperty('--s','1');},600);}});
+var lx=0,ly=0,lt=0,sp=0,rt;
 document.addEventListener('mouseleave',function(){d.classList.remove('on')});})();
 </script>
 <script>

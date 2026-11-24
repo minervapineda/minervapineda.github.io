@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Minerva Pineda</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" href="favicon.png"><link rel="icon" href="favicon.ico" sizes="32x32"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="mp-icon.png?v=3"><link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Pinyon+Script&amp;family=IBM+Plex+Mono:wght@400&amp;display=swap">
 <style>
@@ -16,7 +16,7 @@ body{margin:0;background:#e4e4e4;color:#111}
 .nv a{color:#111;text-decoration:none;cursor:pointer}
 .nv a:hover{opacity:.5}
 .nv .cur::after{content:"*";color:#a3241e;margin-left:2px}
-.flip{position:absolute;left:50%;top:180px;transform:translateX(-50%);background:#111;padding:6px;cursor:pointer;transition:transform .2s}
+.flip{position:absolute;left:50%;top:130px;transform:translateX(-50%);background:#111;padding:6px;cursor:pointer;transition:transform .2s}
 .flip:active{transform:translateX(-50%) scale(.98)}
 .cats{position:absolute;left:0;right:0;bottom:96px;display:flex;justify-content:center;gap:56px;font:500 12px Inter;letter-spacing:.16em}
 .cats a{color:#111;text-decoration:none;cursor:pointer}
@@ -39,7 +39,7 @@ a:focus-visible{outline:1px solid #a3241e;outline-offset:3px}
 .nextp:hover{color:#a3241e}
 .back{display:inline-block}
 @media (hover:hover) and (pointer:fine){html.dotcur,html.dotcur *{cursor:none!important}}
-#dotcur{position:fixed;left:0;top:0;width:10px;height:10px;border-radius:50%;background:#111;pointer-events:none;z-index:9999;transform:translate(-50%,-50%) scale(var(--s,1));opacity:0;transition:opacity .15s,background .15s,transform .35s cubic-bezier(.2,.8,.2,1)}
+#dotcur{position:fixed;left:0;top:0;width:10px;height:10px;border-radius:50%;background:#111;pointer-events:none;z-index:9999;transform:translate(-50%,-50%) scale(var(--s,1));opacity:0;transition:opacity .15s,background .15s,transform .6s cubic-bezier(.25,.8,.25,1)}
 #dotcur.on{opacity:1} #dotcur.hot{background:#a3241e}
 </style>
 </head>
@@ -53,8 +53,8 @@ a:focus-visible{outline:1px solid #a3241e;outline-offset:3px}
 <div class="mono nv" style="position:absolute;right:44px;top:34px;font-size:12px"><a class="cur" href="index.html">home</a> · <a href="projects.html">projects</a> · <a href="about.html">about</a> · <a href="contact.html">contact</a></div>
 <div class="flip" id="mxFlip"><img class="fp" src="img/3a9b15a83c8b76c5e8907f0c68814a82.jpg" style="width:150px;height:190px;object-fit:cover;object-position:54% 35%;display:block;filter:grayscale(1) contrast(1.08)"><img class="fp" src="img/0830097e4fd41d59f101505c61698153.jpg" style="width:150px;height:190px;object-fit:cover;object-position:60% 35%;display:none;filter:grayscale(1) contrast(1.08)"><img class="fp" src="img/c3c81adedb7cc29ccbf77baf74f19337.jpg" style="width:150px;height:190px;object-fit:cover;object-position:54% 35%;display:none;filter:grayscale(1) contrast(1.08)"><img class="fp" src="img/22e4b183409e51162552de9fd685d973.jpg" style="width:150px;height:190px;object-fit:cover;object-position:60% 35%;display:none;filter:grayscale(1) contrast(1.08)"></div>
 
-<div style="position:absolute;left:0;right:0;top:430px;text-align:center;font:400 52px/1 'Pinyon Script',cursive">Minerva Pineda</div>
-<div style="position:absolute;left:50%;top:512px;transform:translateX(-50%);width:440px;font:400 13.5px/1.75 Inter,sans-serif;color:#1a1a1a">
+<div style="position:absolute;left:0;right:0;top:380px;text-align:center;font:400 52px/1 'Pinyon Script',cursive">Minerva Pineda</div>
+<div style="position:absolute;left:50%;top:462px;transform:translateX(-50%);width:440px;font:400 13.5px/1.75 Inter,sans-serif;color:#1a1a1a">
 <p style="margin:0;text-align:justify">Senior at Stanford studying Product Design. Curious to a fault. I learn things the way I've learned everything else: <i>by trying.</i></p>
 </div>
 
@@ -65,7 +65,7 @@ a:focus-visible{outline:1px solid #a3241e;outline-offset:3px}
 </div>
 
 <script>
-(function(){function fit(){var w=document.documentElement.clientWidth,z=Math.min(1,w/1440);if(document.body.hasAttribute('data-fit'))z=Math.min(z,window.innerHeight/900);document.body.style.zoom=z;}
+(function(){function fit(){var w=document.documentElement.clientWidth,z=Math.min(1,w/1440);document.body.style.zoom=z;if(document.body.hasAttribute('data-fit')){var g=document.querySelector('.pg');if(g)g.style.height=Math.max(700,Math.floor(window.innerHeight/z))+'px';}}
 fit();addEventListener('resize',fit);})();
 </script>
 <script>
@@ -74,9 +74,10 @@ var d=document.createElement('div');d.id='dotcur';document.body.appendChild(d);d
 var z=function(){return parseFloat(document.body.style.zoom)||1};
 addEventListener('mousemove',function(e){var k=z();d.style.left=e.clientX/k+'px';d.style.top=e.clientY/k+'px';d.classList.add('on');
 d.classList.toggle('hot',!!(e.target.closest&&e.target.closest('a,button,.cb,#hgh,.flip,.w')));
-var t=performance.now();if(lt){var dt=t-lt||1,v=Math.hypot(e.clientX-lx,e.clientY-ly)/dt;sp=sp*.85+v*.15;}lx=e.clientX;ly=e.clientY;lt=t;
-if(sp>2.2){d.style.setProperty('--s','4');clearTimeout(rt);rt=setTimeout(function(){sp=0;d.style.setProperty('--s','1');},600);}});
-var lx=0,ly=0,lt=0,sp=0,rt;
+var t=performance.now(),dx=e.clientX-lx;lx=e.clientX;
+if(Math.abs(dx)>18){var dir=dx>0?1:-1;if(dir!==ld){flips=flips.filter(function(x){return t-x<700});flips.push(t);ld=dir;}}
+if(flips.length>=5){d.style.setProperty('--s','2.4');flips=[];clearTimeout(rt);rt=setTimeout(function(){d.style.setProperty('--s','1');},900);}});
+var lx=0,ld=0,flips=[],rt;
 document.addEventListener('mouseleave',function(){d.classList.remove('on')});})();
 </script>
 <script>
